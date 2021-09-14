@@ -1,17 +1,16 @@
 import './App.css';
 import WeatherSearch from './WeatherSearch';
+import WeeklyWeather from './WeeklyWeather';
+import DailyWeather from './DailyWeather';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>
-          Weather App
-        </h1>
-        <WeatherSearch />
 
-
-      </header>
+        <WeatherSearch  className='Weather-Search'/>
+        <DailyWeather className='Daily-Weather' />
+        <WeeklyWeather className='WeeklyWeather'/>
+ 
     </div>
   );
 }
