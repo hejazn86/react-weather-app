@@ -1,8 +1,9 @@
-.App {
+.App-container {
   text-align: left;
   background-color: #99a1b1;
-  margin: 50px 230px;
-  /* padding-left: 20px;
-  padding-top: 50px; */
-  padding: 50px 0px 20px 20px;
+  padding: 35px 20px 15px;
+}
+
+.App {
+  margin: 40px 230px;
 }
