@@ -2,6 +2,7 @@ import React from "react";
 import './DailyWeather.css';
 import ReactAnimatedWeather from 'react-animated-weather';
 
+
 export default function DailyWeather(){
     return(
         <div className='Daily-Weather'>

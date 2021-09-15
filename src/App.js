@@ -1,15 +1,15 @@
 import './App.css';
 import WeatherSearch from './WeatherSearch';
-import WeeklyWeather from './WeeklyWeather';
+import Forecast from './Forecast';
 import DailyWeather from './DailyWeather';
 
 function App() {
   return (
     <div className="App">
 
-        <WeatherSearch  className='Weather-Search'/>
+        <WeatherSearch className='Weather-Search'/>
         <DailyWeather className='Daily-Weather' />
-        <WeeklyWeather className='WeeklyWeather'/>
+        <Forecast className='Forecast'/>
  
     </div>
   );

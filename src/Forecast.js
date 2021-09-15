@@ -2,9 +2,9 @@ import React from 'react';
 import './WeeklyWeather.css';
 import ReactAnimatedWeather from 'react-animated-weather/build/ReactAnimatedWeather';
 
-export default function WeeklyWeather(){
+export default function Forecast(){
     return (
-        <div className='WeeklyWeather'>
+        <div className='Forecast'>
             <div className='row'>
                 <div className='col-2'>
                     <div>Tue</div>
@@ -16,7 +16,7 @@ export default function WeeklyWeather(){
                         animate='true'
                         />
                     </div>
-                    <div>temp</div>
+                    <div>40 °C</div>
                 </div>
                 <div className='col-2'>
                     <div>Wed</div>
@@ -28,7 +28,7 @@ export default function WeeklyWeather(){
                         animate='true'
                         />
                     </div>
-                    <div>temp</div>
+                    <div>45°C</div>
                 </div>
                 <div className='col-2'>
                     <div>Thu</div>
@@ -40,7 +40,7 @@ export default function WeeklyWeather(){
                         animate='true'
                         />
                     </div>
-                    <div>temp</div>
+                    <div>55 °C</div>
                 </div>                
                 <div className='col-2'>
                     <div>Fri</div>
@@ -52,7 +52,7 @@ export default function WeeklyWeather(){
                         animate='true'
                         />
                     </div>
-                    <div>temp</div>
+                    <div>46 °C</div>
                 </div>                
                 <div className='col-2'>
                     <div>Sat</div>
@@ -64,7 +64,7 @@ export default function WeeklyWeather(){
                         animate='true'
                         />
                     </div>
-                    <div>temp</div>
+                    <div>40 °C</div>
                 </div>                
                 <div className='col-2'>
                     <div>sun</div>
@@ -76,7 +76,7 @@ export default function WeeklyWeather(){
                         animate='true'
                         />
                     </div>
-                    <div>temp</div>
+                    <div>46 °C</div>
                 </div>
             </div>
         </div>
