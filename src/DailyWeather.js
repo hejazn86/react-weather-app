@@ -3,6 +3,7 @@ import './DailyWeather.css';
 import DateDisplay from "./DateDisplay";
 import IconDisplay from './IconDisplay';
 
+
 export default function DailyWeather(props){
     return(
         <div className='Daily-Weather'>
