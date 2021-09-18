@@ -1,24 +1,24 @@
 import React from "react";
 import './DailyWeather.css';
-import ReactAnimatedWeather from 'react-animated-weather';
+import DateDisplay from "./DateDisplay";
+import IconDisplay from './IconDisplay';
 
-
-export default function DailyWeather(){
+export default function DailyWeather(props){
     return(
         <div className='Daily-Weather'>
             <div className='row'>
                 <ul>
                     <li className='city-name'>
                         <h4>
-                            Ahvaz
+                            {props.weatherData.city}
                         </h4>
                     </li>
                     <li className='date-time'>
-                        Monday 21:40 
+                        <DateDisplay dateData= {props.weatherData.date}/>
                     </li>
                     <li className='description'>
                         <h5>
-                        Clear
+                        {props.weatherData.description}
                         </h5>
                     </li>
                 </ul>
@@ -27,15 +27,10 @@ export default function DailyWeather(){
             <div className='row'>
                 <div className='col-6'>
                     <span className='icon'>
-                        <ReactAnimatedWeather
-                        icon= 'CLEAR_DAY'
-                        color='blue'
-                        size={50}
-                        animate='true'
-                        />
+                        <IconDisplay iconData={props.weatherData.icon}/>
                     </span>
-                    <span className='temperature'>
-                        42
+                    <span className='temp'>
+                    {Math.round(props.weatherData.temperature)}
                     </span >
                     <span className='unit'>
                         °C
@@ -43,8 +38,8 @@ export default function DailyWeather(){
                 </div>
                 <div className='col-6'>
                     <ul>
-                        <li>Wind : 5 km/h</li>
-                        <li>Humidity : % 65</li>
+                        <li>Wind : {props.weatherData.wind}km/h</li>
+                        <li>Humidity : {props.weatherData.humidity} %</li>
                     </ul>
                 </div>
 

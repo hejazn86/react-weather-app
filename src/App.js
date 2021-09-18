@@ -1,22 +1,22 @@
 import './App.css';
 import WeatherSearch from './WeatherSearch';
-import Forecast from './Forecast';
-import DailyWeather from './DailyWeather';
+
+
 
 function App() {
   return (
     <div className="App">
       <div className='App-container'>
 
-        <WeatherSearch className='Weather-Search'/>
-        <DailyWeather className='Daily-Weather' />
-        <Forecast className='Forecast'/> 
+        <WeatherSearch  defaultCity="London" />
+        
     </div>
     <div>
       <small clas="source-link">
         <a
         href="https://github.com/hejazn86/react-weather-app"
         target="_blank"
+        rel="noreferrer"
         class="text-decoration-none"
         >
           open-source code,{" "} 
