@@ -9,17 +9,17 @@ export default function DailyWeather(props){
             <div className='row'>
                 <ul>
                     <li className='city-name'>
-                        <h4>
+                        <h1>
                             {props.weatherData.city}
-                        </h4>
+                        </h1>
                     </li>
                     <li className='date-time'>
-                        <DateDisplay dateData= {props.weatherData.date}/>
+                        <DateDisplay date= {props.weatherData.date}/>
                     </li>
-                    <li className='description'>
-                        <h5>
+                    <li className='description text-capitalize'>
+                        <h3>
                         {props.weatherData.description}
-                        </h5>
+                        </h3>
                     </li>
                 </ul>
 
@@ -37,9 +37,9 @@ export default function DailyWeather(props){
                     </span>
                 </div>
                 <div className='col-6'>
-                    <ul>
-                        <li>Wind : {props.weatherData.wind}km/h</li>
-                        <li>Humidity : {props.weatherData.humidity} %</li>
+                    <ul className='extra-info'>
+                        <li> <span className='wind'>Wind : </span>{" "}{props.weatherData.wind}{' '}km/h</li>
+                        <li> <span className='humidity'>Humidity : </span>{" "}{props.weatherData.humidity} %</li>
                     </ul>
                 </div>
 

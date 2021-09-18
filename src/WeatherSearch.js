@@ -25,7 +25,7 @@ export default function WeatherSearch(props){
     //preventing the page from being refreshed on submit
     function SearchCity(event){
         event.preventDefault();
-        // search();
+        search();
     }
 
     //Changing the city by submitting
