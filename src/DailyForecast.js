@@ -1,7 +1,7 @@
 import React from "react";
 import IconDisplay from "./IconDisplay";
 
-export default function DailyForcast(props){
+export default function DailyForecast(props){
 
     function minTemperature(){
         let temp = Math.round(props.dailyDatatemp.min);
@@ -22,15 +22,15 @@ export default function DailyForcast(props){
     }
     
     return (
-    <div >
-        <div>{day()}</div>
+    <div  className='DailyForecast'>
+        <div className='day'>{day()}</div>
         <div className='icon'>
             <IconDisplay iconData={props.dailyData.weather[0].icon} size={40} />
         </div>
         <div>
-            <span>{minTemperature()}°</span>
+            <span className='max-temp'>{maxTemperature()}°</span>
             {"  "}
-            <span>{maxTemperature()}°</span>
+            <span className='min-temp'>{minTemperature()}°</span>
         </div>
     </div> 
     );

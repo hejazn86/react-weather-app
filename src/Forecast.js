@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from 'react';
 import './Forecast.css';
 import axios from 'axios';
-import DailyForcast from './DailyForcast';
+import DailyForecast from './DailyForecast';
 
 export default function Forecast(props){
     const [forecast, setForecast] = useState();
@@ -36,7 +36,7 @@ export default function Forecast(props){
                     if(0 <index < 6){
                         return(
                     <div className='col-2' key={index}>
-                        <DailyForcast dailyData = {dayForecast}/>
+                        <DailyForecast dailyData = {dayForecast}/>
                     </div>
                     );
                 } else{
