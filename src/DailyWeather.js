@@ -28,7 +28,7 @@ export default function DailyWeather(props){
             <div className='row'>
                 <div className='col-6'>
                     <span className='icon'>
-                        <IconDisplay iconData={props.weatherData.icon}/>
+                        <IconDisplay iconData={props.weatherData.icon} size={60} />
                     </span>
                     <span className='temp'>
                     {Math.round(props.weatherData.temperature)}
