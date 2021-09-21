@@ -1,8 +1,16 @@
 import React from 'react';
 import './Forecast.css';
 import ReactAnimatedWeather from 'react-animated-weather/build/ReactAnimatedWeather';
+import axios from 'axios';
 
-export default function Forecast(){
+export default function Forecast(props){
+    let longitude = props.coordinates.lon;
+    let latitude = props.coordinates.lat;
+    let urlApi = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=3455fac0521b361257ae4511d73d4ff4`;
+    
+    axios.get(urlApi).then((response) =>{
+        console.log(response.data);
+    });
     return (
         <div className='Forecast'>
             <div className='row'>
@@ -17,67 +25,7 @@ export default function Forecast(){
                         />
                     </div>
                     <div>40 °C</div>
-                </div>
-                <div className='col-2'>
-                    <div>Wed</div>
-                    <div className='icon'>                        
-                        <ReactAnimatedWeather
-                        icon= 'CLEAR_DAY'
-                        color='blue'
-                        size={40}
-                        animate='true'
-                        />
-                    </div>
-                    <div>45°C</div>
-                </div>
-                <div className='col-2'>
-                    <div>Thu</div>
-                    <div className='icon'>                        
-                        <ReactAnimatedWeather
-                        icon= 'SLEET'
-                        color='blue'
-                        size={40}
-                        animate='true'
-                        />
-                    </div>
-                    <div>55 °C</div>
-                </div>                
-                <div className='col-2'>
-                    <div>Fri</div>
-                    <div className='icon'>                        
-                        <ReactAnimatedWeather
-                        icon= 'CLOUDY'
-                        color='blue'
-                        size={40}
-                        animate='true'
-                        />
-                    </div>
-                    <div>46 °C</div>
-                </div>                
-                <div className='col-2'>
-                    <div>Sat</div>
-                    <div className='icon'>                        
-                        <ReactAnimatedWeather
-                        icon= 'WIND'
-                        color='blue'
-                        size={40}
-                        animate='true'
-                        />
-                    </div>
-                    <div>40 °C</div>
-                </div>                
-                <div className='col-2'>
-                    <div>sun</div>
-                    <div className='icon'>                        
-                        <ReactAnimatedWeather
-                        icon= 'RAIN'
-                        color='blue'
-                        size={40}
-                        animate='true'
-                        />
-                    </div>
-                    <div>46 °C</div>
-                </div>
+                </div>                            
             </div>
         </div>
     );

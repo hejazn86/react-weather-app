@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './WeatherSearch.css'
 import axios from 'axios';
 import DailyWeather from './DailyWeather';
+import Forecast from './Forecast';
 
 
 export default function WeatherSearch(props){
@@ -18,6 +19,7 @@ export default function WeatherSearch(props){
             date: new Date(response.data.dt * 1000),
             description: response.data.weather[0].description,
             icon: response.data.weather[0].icon,
+            coords: response.data.coord,
             ready: true,
 
         });
@@ -48,6 +50,7 @@ export default function WeatherSearch(props){
                 <input  type='submit' value='Search' className='btn btn-primary py-2 px-4 mb-1'/>
             </form>
             <DailyWeather weatherData={weather}/>
+            <Forecast coordinates= {weather.coords}/>
         </div>
         );
     } else {
