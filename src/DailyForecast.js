@@ -1,10 +1,11 @@
 import React from "react";
 import IconDisplay from "./IconDisplay";
+import './DailyForecast.css';
 
 export default function DailyForecast(props){
 
     function minTemperature(){
-        let temp = Math.round(props.dailyDatatemp.min);
+        let temp = Math.round(props.dailyData.temp.min);
         return temp;
     }
 

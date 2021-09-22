@@ -1,6 +1,10 @@
 .DailyForecast {
   text-align: center;
 }
+.day {
+  margin: 5px 0 10px 0;
+}
 .min-temp {
-  opacity: 70%;
+  opacity: 85%;
+  margin-left: 7px;
 }

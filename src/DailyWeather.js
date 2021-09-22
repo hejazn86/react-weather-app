@@ -18,16 +18,16 @@ export default function DailyWeather(props){
                         <DateDisplay date= {props.weatherData.date}/>
                     </li>
                     <li className='description text-capitalize'>
-                        <h3>
+                        <h4>
                         {props.weatherData.description}
-                        </h3>
+                        </h4>
                     </li>
                 </ul>
 
             </div>
             <div className='row'>
                 <div className='col-6'>
-                    <span className='icon'>
+                    <span className='icon me-2'>
                         <IconDisplay iconData={props.weatherData.icon} size={60} />
                     </span>
                     <span className='temp'>
